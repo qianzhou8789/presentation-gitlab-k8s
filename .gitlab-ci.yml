@@ -1,4 +1,8 @@
+# For jobs without a image specified use the below Docker image
+image: golang:1.12.5-stretch
+# Or for the test job the image `golang:1.9` will be used:
 test:
     stage: test
+    image: python:3
     script:
-        - go test ./...
+        - echo Something in the test step in a python:3 image
